@@ -3,6 +3,36 @@
 
 Please note these demos should be considered as CSS "Proofs of Concepts". They may have serious issues from accessibility point of view (keyboard navigation, speech synthesis, etc.), or progressive enhancement/degradation/etc.
 
+## learn
+
+### checkbox-counter
+https://developer.cdn.mozilla.net/zh-CN/docs/Web/CSS/counter
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-increment
+
+计数器统计 主要利用了 counter-increment counter css 属性
+
+```css
+.counter ol {
+  counter-reset: list;
+}
+.counter ol li {
+  counter-increment: list;
+}
+.counter ol li::after {
+  content: "[" counter(list) "] == [" counter(list, upper-roman) "]" ;
+}
+```
+```html
+<div class="counter">
+  <ol>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+</div>
+```
+
+---
 
 ### Style Guide:
 
